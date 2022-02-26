@@ -9,23 +9,35 @@ function loadUser(){
 }
 
 function displayUser(data){
+    const ul = document.getElementById('user')
     for(const user of data ){
-        console.log(user.name);
+        // console.log(user.name);
+        const li = document.createElement('li');
+        li.innerHTML =`<p>${user.name}</p>
+                        <p>${user.email}</p>`;
+
+        ul.appendChild(li)
     }
 }
 
 
-// get post 
 
-function loadPost(){
-    fetch('https://jsonplaceholder.typicode.com/posts')
+
+
+function loadComment(){
+    fetch('https://jsonplaceholder.typicode.com/todos')
     .then(res => res.json())
-    .then(post => displayPost(post))
+    .then(data => displayData(data))
 }
 
-function displayPost(post){
-    for(const posts of post ){
-        console.log(posts.title);
+function displayData(data){
+    const div = document.getElementById('comment')
+    for(const comments of data){
+        // console.log(comments.name)
+        const h3 = document.createElement('h3');
+
+        h3.innerText =`${comments.id} ${comments.title}`;
+        div.appendChild(h3);
+
     }
 }
-

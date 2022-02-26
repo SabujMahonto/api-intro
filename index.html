@@ -5,15 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API</title>
+    <style>
+        .new_post{
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid cornflowerblue;
+            border-radius: 20px;
+            background-color: bisque;
+        }
+    </style>
 </head>
 <body>
     <h1>What is API</h1>
 
+    <div id="comment"></div>
+
+    <ul id="user">
+    </ul>
+    <div id="post">
+    </div>
+
     <button onclick="loadUser()">Load user</button>
     <button onclick="loadPost()">Load Post</button>
-
+    <button onclick="loadComment()">Comment</button>
     <!-- <script src="./js/json.js"></script> -->
     <script src="./js/api.js"></script>
+    <script src="./js/post.js"></script>
+    
     
 
 </body>
